@@ -3,59 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E.M. Petrolera Roraima - Dashboard de Producción</title>
+    <title>PETROLERA RORAIMA  | A&B OIL AND GAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        :root {
+            --primary: #1d1d86;
+            --accent: #c5a059;
+        }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f1f5f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .bg-primary { background-color: var(--primary); }
+        .text-accent { color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+        
+        .hero-static {
+            background-color: var(--primary);
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-logo {
+            max-height: 45px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .pulse-green {
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
         }
         .card-shadow {
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        .gradient-header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
-        .pulse-green {
-            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-            animation: pulse-green 2s infinite;
-        }
-        @keyframes pulse-green {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
-        }
-        .variation-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-        }
     </style>
 </head>
-<body class="pb-12">
+<body class="pb-12 bg-gray-50">
 
-    <!-- Header -->
-    <header class="gradient-header text-white p-4 sticky top-0 z-50 card-shadow">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <div class="bg-white p-1.5 rounded-md">
-                    <div class="text-slate-900 font-bold text-[10px] leading-tight">
-                        FLUXUS<br>A&B OIL & GAS
-                    </div>
+<!-- Header / Banner Superior -->
+    <header class="bg-primary text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            
+            <!-- Logo y Datos de Empresa -->
+            <div class="flex items-center space-x-4">
+                <div class="bg-blue p-1 rounded-md">
+                    <a href="#" class="block">
+                        <img src="https://i.postimg.cc/HrmTZbRL/logo-A-B-BLA-PEQ.png" 
+                             alt="A&B Oil and Gas Logo" 
+                             class="banner-logo"
+                             onerror="this.src='https://via.placeholder.com/200x50?text=A%26B+Oil+and+Gas'">
+                    </a>
                 </div>
-                <div>
-                    <h1 class="text-lg font-bold uppercase leading-none">Petrolera Roraima S.A.</h1>
-                    <div class="flex items-center mt-1">
+                
+                <div class="border-l border-slate-700 pl-4">
+                    <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">
+                        Petrolera Roraima S.A.
+                    </h1>
+                    <div class="flex items-center mt-0.5">
                         <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
-                        <span class="text-[10px] text-green-400 font-semibold tracking-widest uppercase">Sistema Activo<br>15/04/26</span>
+                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">
+                            Sistema Activo <span class="text-slate-400 mx-1">|</span> Ultima actualización: 16/04/26
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="text-right hidden sm:block">
-                <p class="text-[10px] text-slate-400 uppercase tracking-tighter">Miércoles, 15/04/2026</p>
-                <p class="text-xs font-bold text-blue-400">VERSIÓN DE PRUEBA</p>
+
+            <!-- Información de Fecha y Versión -->
+            <div class="flex items-center space-x-8">
+                <div class="text-right border-l border-slate-700 pl-4">
+                    <p class="text-[10px] text-slate-400 uppercase font-semibold">Jueves, 16/04/2026</p>
+                    <p class="text-[11px] font-black text-accent tracking-tighter">VERSIÓN DE PRUEBA</p>
+                </div>
             </div>
         </div>
     </header>
@@ -64,52 +113,76 @@
         
         <!-- Alerta Versión Prueba Mobile -->
         <div class="sm:hidden mb-4 bg-blue-600 text-white text-[10px] font-bold py-1 px-3 rounded-full text-center">
-            MODO: VERSIÓN DE PRUEBA | 15/04/2026
+            MODO: VERSIÓN DE PRUEBA | 16/04/2026
         </div>
 
-        <!-- KPIs Principales -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-            <div class="bg-white p-4 rounded-xl card-shadow border-b-4 border-blue-600">
-                <p class="text-gray-500 text-[10px] font-bold uppercase mb-1">Real Campo</p>
+        <!-- KPIs Principales Actualizados -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-blue-600">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">Real Campo Hoy</p>
                 <div class="flex items-baseline space-x-1">
-                    <span class="text-xl font-black text-slate-800">29,664</span>
-                    <span class="text-[10px] text-gray-400">MBD</span>
+                    <span class="text-lg font-black text-slate-800">32,079</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">MBD</span>
                 </div>
-                <div class="mt-2 text-[9px] font-bold text-red-600 flex items-center">
-                    <i class="fas fa-arrow-down mr-1"></i> VS POA: -8.286
+                <div class="mt-1 text-[8px] font-bold text-green-600 flex items-center">
+                    <i class="fas fa-chevron-up mr-1"></i> +2,415 vs ayer
                 </div>
             </div>
 
-            <div class="bg-white p-4 rounded-xl card-shadow border-b-4 border-slate-400">
-                <p class="text-gray-500 text-[10px] font-bold uppercase mb-1">POA Objetivo</p>
+            <!-- Nueva Tarjeta: Producción Día Anterior -->
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-indigo-400">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">Prod. Día Anterior</p>
                 <div class="flex items-baseline space-x-1">
-                    <span class="text-xl font-black text-slate-800">37,950</span>
-                    <span class="text-[10px] text-gray-400">MBD</span>
+                    <span class="text-lg font-black text-slate-800">29,664</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">MBD</span>
                 </div>
-                <div class="mt-2 text-[9px] text-gray-400 font-semibold">
-                    CUMPLIMIENTO: 78.1%
+                <div class="mt-1 text-[8px] font-bold text-green-500 uppercase">
+                    Variación Positiva
                 </div>
             </div>
 
-            <div class="bg-white p-4 rounded-xl card-shadow border-b-4 border-emerald-500">
-                <p class="text-gray-500 text-[10px] font-bold uppercase mb-1">Infraestructura</p>
+            <!-- Nueva Tarjeta: Producción Disponible CAT 1 -->
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-emerald-600">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">Prod. Disponible CAT 1</p>
                 <div class="flex items-baseline space-x-1">
-                    <span class="text-xl font-black text-slate-800">41</span>
-                    <span class="text-[10px] text-gray-400 uppercase tracking-tighter">Macollas Activas</span>
+                    <span class="text-lg font-black text-emerald-700">36,821</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">MBD</span>
                 </div>
-                <div class="mt-2 text-[9px] text-emerald-600 font-bold uppercase">
-                    De 64 Macollas en Campo
+                <div class="mt-1 text-[8px] text-gray-400 font-semibold uppercase">
+                    Potencial Instalado
                 </div>
             </div>
 
-            <div class="bg-white p-4 rounded-xl card-shadow border-b-4 border-orange-500">
-                <p class="text-gray-500 text-[10px] font-bold uppercase mb-1">Disponibilidad Cat 1</p>
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-slate-400">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">POA Objetivo</p>
                 <div class="flex items-baseline space-x-1">
-                    <span class="text-xl font-black text-slate-800">36,821</span>
-                    <span class="text-[10px] text-gray-400 uppercase tracking-tighter">MBD</span>
+                    <span class="text-lg font-black text-slate-800">37,95</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">MBD</span>
                 </div>
-                <div class="mt-2 text-[9px] text-orange-600 font-bold uppercase">
-                    Producción Pozos Cat 1
+                <div class="mt-1 text-[8px] text-gray-400 font-semibold">
+                    CUMPLIMIENTO: 84.5%
+                </div>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-emerald-500">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">Infraestructura</p>
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-lg font-black text-slate-800">41</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">Macollas</span>
+                </div>
+                <div class="mt-1 text-[8px] text-emerald-600 font-bold uppercase">
+                    Activas de 64
+                </div>
+            </div>
+
+            <div class="bg-white p-3 rounded-xl card-shadow border-b-4 border-orange-500">
+                <p class="text-gray-500 text-[9px] font-bold uppercase mb-1">Compromiso Sem.</p>
+                <div class="flex items-baseline space-x-1">
+                    <span class="text-lg font-black text-slate-800">29,00</span>
+                    <span class="text-[9px] text-gray-400 font-bold uppercase">MBD</span>
+                </div>
+                <div class="mt-1 text-[8px] text-orange-600 font-bold uppercase">
+                    % AyS: 1,52
                 </div>
             </div>
         </div>
@@ -128,12 +201,12 @@
                             <div class="text-center w-1/2 border-r">
                                 <p class="text-[10px] text-gray-500 uppercase font-bold">Categoría 1</p>
                                 <p class="text-lg font-black text-emerald-600">248</p>
-                                <p class="text-[9px] text-gray-400">Disponibles</p>
+                                <p class="text-[9px] text-gray-400">En Producción</p>
                             </div>
                             <div class="text-center w-1/2">
                                 <p class="text-[10px] text-gray-500 uppercase font-bold">Categoría 2</p>
                                 <p class="text-lg font-black text-amber-500">190</p>
-                                <p class="text-[9px] text-gray-400">Intervención/Pend.</p>
+                                <p class="text-[9px] text-gray-400">Intervención</p>
                             </div>
                         </div>
                         <div class="space-y-2">
@@ -152,26 +225,30 @@
                 <!-- Gestión de Diluente -->
                 <section class="bg-white rounded-xl card-shadow overflow-hidden">
                     <div class="bg-blue-900 p-3 text-white">
-                        <h3 class="font-bold text-xs uppercase tracking-widest">Diluente (Nafta 56,5°)</h3>
+                        <h3 class="font-bold text-xs uppercase tracking-widest">Diluente (Nafta 54,3° API)</h3>
                     </div>
                     <div class="p-4 space-y-4">
                         <div class="grid grid-cols-2 gap-2">
                             <div class="p-2 bg-slate-50 rounded text-center">
                                 <p class="text-[9px] text-gray-500 uppercase">Inyección</p>
-                                <p class="text-sm font-bold">9,000 MBD</p>
+                                <p class="text-sm font-bold">9,485 MBD</p>
                             </div>
                             <div class="p-2 bg-slate-50 rounded text-center">
-                                <p class="text-[9px] text-gray-500 uppercase">Inventario</p>
-                                <p class="text-sm font-bold text-blue-700">34,502 Bls</p>
+                                <p class="text-[9px] text-gray-500 uppercase">Recibido</p>
+                                <p class="text-sm font-bold text-blue-700">8,947 MBD</p>
                             </div>
                         </div>
                         <div class="pt-2 border-t">
                             <div class="flex justify-between items-end mb-1 text-[10px]">
+                                <span class="font-bold text-gray-500 uppercase">Inventario</span>
+                                <span class="font-black text-slate-800 uppercase">37,314 MBD</span>
+                            </div>
+                            <div class="flex justify-between items-end mb-1 text-[10px]">
                                 <span class="font-bold text-gray-500 uppercase">Autonomía</span>
-                                <span class="font-black text-blue-600 uppercase">92:01 Hrs</span>
+                                <span class="font-black text-blue-600 uppercase">94,42 Hrs</span>
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-1.5">
-                                <div class="bg-blue-600 h-1.5 rounded-full" style="width: 85%"></div>
+                                <div class="bg-blue-600 h-1.5 rounded-full" style="width: 88%"></div>
                             </div>
                         </div>
                     </div>
@@ -183,181 +260,191 @@
                 
                 <section class="bg-white rounded-xl card-shadow overflow-hidden">
                     <div class="bg-indigo-900 p-3 text-white flex justify-between items-center">
-                        <h3 class="font-bold text-xs uppercase tracking-widest">Unidades y Taladros</h3>
-                        <span class="text-[10px] bg-indigo-800 px-2 py-0.5 rounded uppercase font-bold">3 Equipos Contratados</span>
+                        <h3 class="font-bold text-xs uppercase tracking-widest">Unidades y Taladros (3 Equipos)</h3>
+                        <span class="text-[10px] bg-indigo-800 px-2 py-0.5 rounded uppercase font-bold">Estado Real Tiempo</span>
                     </div>
                     
-                    <div class="p-4 space-y-5">
-                        <!-- Equipo 1: Flush By -->
-                        <div class="border-l-4 border-indigo-500 pl-4 py-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <h4 class="text-xs font-black text-slate-800 uppercase">Flush By RSU SDO01B <span class="text-[9px] font-normal text-slate-500">(150 HP)</span></h4>
-                                    <p class="text-[10px] font-bold text-indigo-600">MACOLLA: DE22</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-[9px] font-bold uppercase text-slate-400">NPT Actual</p>
-                                    <p class="text-[10px] font-black text-red-600">87 Hrs</p>
-                                </div>
+                    <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- TALADRO FLUSH BY SDO01B -->
+                        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-blue-600 text-white text-[8px] font-black px-2 py-0.5 rounded-bl">FLUSH BY</div>
+                            <h4 class="text-xs font-black text-slate-800 uppercase mb-1">SDO01B (150HP)</h4>
+                            <div class="grid grid-cols-2 gap-2 text-[9px] mb-2">
+                                <p><span class="text-slate-400 font-bold uppercase">Cluster/Pozo:</span> <br>DE22 / DE22-1W</p>
+                                <p class="text-right"><span class="text-slate-400 font-bold uppercase">Trabajo:</span> <br>Sin Información</p>
                             </div>
-                            <div class="grid grid-cols-2 gap-4 mb-2">
-                                <div class="bg-slate-50 p-2 rounded">
-                                    <div class="flex justify-between text-[9px] mb-1">
-                                        <span class="text-slate-500 uppercase">Plan Días: <b class="text-slate-800">1.0</b></span>
-                                        <span class="text-slate-500 uppercase font-bold">Real: <b class="text-indigo-600">SIN/INF</b></span>
-                                    </div>
-                                    <div class="w-full bg-gray-200 h-1 rounded-full"></div>
-                                </div>
-                                <div class="bg-slate-50 p-2 rounded flex items-center">
-                                    <p class="text-[9px] leading-tight text-slate-600"><b class="text-slate-800 uppercase">Estatus:</b> Pozo suspendido temporalmente.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Equipo 2: Pulling SDO04 -->
-                        <div class="border-l-4 border-amber-500 pl-4 py-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <h4 class="text-xs font-black text-slate-800 uppercase">Pulling SDO04 <span class="text-[9px] font-normal text-slate-500">(350 HP)</span></h4>
-                                    <p class="text-[10px] font-bold text-amber-600 uppercase">Cluster: 66X | Pozo: 66X | Trabajo: RBCP</p>
-                                </div>
-                                <div class="text-right">
-                                    <p class="text-[9px] font-bold uppercase text-slate-400">NPT Actual</p>
-                                    <p class="text-[10px] font-black text-red-600">74.5 Hrs</p>
-                                </div>
-                            </div>
-                            <div class="bg-amber-50 p-2 rounded border border-amber-100 mb-2">
-                                <p class="text-[9px] text-amber-800 leading-tight">
-                                    <b class="uppercase text-[8px]">Estatus:</b> Pozo diferido a servicio mayor. Esperando asignación.
+                            <div class="bg-white p-2 rounded mb-2 border border-slate-100">
+                                <p class="text-[9px] leading-tight text-orange-700 italic font-medium">
+                                    <b>Status:</b> Pozo Diferido a servicio mayor / Espera por Asignación de Pozo
                                 </p>
                             </div>
-                            <div class="flex flex-wrap gap-2">
-                                <span class="bg-slate-100 text-slate-700 text-[8px] font-bold px-2 py-0.5 rounded uppercase">Pozos Mes: 3</span>
-                                <span class="bg-slate-100 text-slate-700 text-[8px] font-bold px-2 py-0.5 rounded uppercase">Pozos Año: 8</span>
-                                <span class="bg-emerald-100 text-emerald-700 text-[8px] font-bold px-2 py-0.5 rounded uppercase">Mes: 300 Bbls</span>
-                                <span class="bg-emerald-100 text-emerald-700 text-[8px] font-bold px-2 py-0.5 rounded uppercase">Año: 1600 Bbls</span>
-                                <span class="bg-blue-100 text-blue-700 text-[8px] font-bold px-2 py-0.5 rounded uppercase">Prom. Trabajo: 4.3 Días</span>
+                            <div class="grid grid-cols-3 gap-1 text-center">
+                                <div class="bg-blue-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-blue-600 font-bold">Plan/Real</p>
+                                    <p class="text-[10px] font-black text-slate-800">1 / 0,25</p>
+                                </div>
+                                <div class="bg-emerald-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-emerald-600 font-bold">Barriles (M)</p>
+                                    <p class="text-[10px] font-black text-slate-800">0,437</p>
+                                </div>
+                                <div class="bg-red-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-red-600 font-bold">NPT (Hrs)</p>
+                                    <p class="text-[10px] font-black text-red-700">105</p>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Equipo 3: Pulling SDO-002 -->
-                        <div class="border-l-4 border-red-500 pl-4 py-1">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <h4 class="text-xs font-black text-slate-800 uppercase">Pulling SDO-002 <span class="text-[9px] font-normal text-slate-500">(350 HP)</span></h4>
-                                    <p class="text-[10px] font-bold text-red-600 uppercase">Cluster: IJ27</p>
+                        <!-- TALADRO PULLING SDO04 -->
+                        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 bg-amber-600 text-white text-[8px] font-black px-2 py-0.5 rounded-bl">PULLING</div>
+                            <h4 class="text-xs font-black text-slate-800 uppercase mb-1">SDO04 (350HP)</h4>
+                            <div class="grid grid-cols-2 gap-2 text-[9px] mb-2">
+                                <p><span class="text-slate-400 font-bold uppercase">Cluster/Pozo:</span> <br>66X / 66X</p>
+                                <p class="text-right"><span class="text-slate-400 font-bold uppercase">Trabajo:</span> <br>RBCP</p>
+                            </div>
+                            <div class="bg-white p-2 rounded mb-2 border border-slate-100">
+                                <p class="text-[9px] leading-tight text-red-700 italic font-medium">
+                                    <b>Status:</b> Pozo Suspendido / Falla crítica en sistema estructural
+                                </p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-1 text-center">
+                                <div class="bg-amber-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-amber-600 font-bold">Plan/Real</p>
+                                    <p class="text-[10px] font-black text-slate-800">3,5 / 0,1</p>
                                 </div>
-                                <div class="text-right">
-                                    <p class="text-[9px] font-bold uppercase text-slate-400">NPT Actual</p>
-                                    <p class="text-[10px] font-black text-red-600">34 Hrs</p>
+                                <div class="bg-emerald-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-emerald-600 font-bold">Barriles (M)</p>
+                                    <p class="text-[10px] font-black text-slate-800">0,300</p>
+                                </div>
+                                <div class="bg-red-50 p-1 rounded">
+                                    <p class="text-[7px] uppercase text-red-600 font-bold">NPT (Hrs)</p>
+                                    <p class="text-[10px] font-black text-red-700">92,5</p>
                                 </div>
                             </div>
-                            <div class="bg-red-50 p-2 rounded border border-red-100">
-                                <p class="text-[9px] text-red-900 font-bold uppercase">Estatus: Esperando mudanza tras inspección APTO (13/04/26).</p>
+                        </div>
+
+                        <!-- TALADRO PULLING SDO02 -->
+                        <div class="border border-slate-200 rounded-lg p-3 bg-slate-50 relative overflow-hidden md:col-span-2">
+                            <div class="absolute top-0 right-0 bg-slate-600 text-white text-[8px] font-black px-2 py-0.5 rounded-bl">PULLING</div>
+                            <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
+                                <h4 class="text-xs font-black text-slate-800 uppercase">SDO02 (350HP)</h4>
+                                <div class="flex space-x-4 text-[9px]">
+                                    <p><span class="text-slate-400 font-bold uppercase">Cluster/Pozo:</span> IJ27 / Sin Pozo</p>
+                                    <p><span class="text-slate-400 font-bold uppercase">Trabajo:</span> Sin/Inf</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                <div class="md:col-span-2 bg-blue-50 p-2 rounded border border-blue-100 flex items-center">
+                                    <p class="text-[9px] text-blue-800 italic font-medium">
+                                        <b>Status:</b> Equipo en Resguardo / Esperando para iniciar Mudanza
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-3 gap-1 text-center">
+                                    <div class="bg-white p-1 rounded border border-slate-100">
+                                        <p class="text-[7px] uppercase text-slate-500 font-bold">Plan</p>
+                                        <p class="text-[10px] font-black text-slate-800">3,5</p>
+                                    </div>
+                                    <div class="bg-white p-1 rounded border border-slate-100">
+                                        <p class="text-[7px] uppercase text-slate-500 font-bold">Real</p>
+                                        <p class="text-[10px] font-black text-slate-400 italic">S/I</p>
+                                    </div>
+                                    <div class="bg-red-50 p-1 rounded">
+                                        <p class="text-[7px] uppercase text-red-600 font-bold">NPT</p>
+                                        <p class="text-[10px] font-black text-red-700">52</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
-            </div>
 
-            <!-- Sección: Explicaciones Variación de Producción -->
-            <div class="lg:col-span-3 space-y-6">
+                <!-- Sección: Análisis de Producción vs Potencial -->
                 <section class="bg-white rounded-xl card-shadow overflow-hidden">
-                    <div class="bg-slate-800 p-3 text-white flex items-center justify-between">
-                        <h3 class="font-bold text-xs uppercase tracking-widest">📝 Explicaciones Variación de Producción</h3>
-                        <span class="text-[10px] uppercase font-bold text-slate-400">Análisis Técnico Detallado</span>
+                    <div class="bg-slate-800 p-3 text-white flex justify-between items-center">
+                        <h3 class="font-bold text-xs uppercase tracking-widest">📝 Análisis de Producción vs Potencial</h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[9px] font-bold text-red-400 uppercase">Variación Total:</span>
+                            <span class="text-xs font-black text-white">-32,356 MBD</span>
+                        </div>
                     </div>
-                    
-                    <div class="p-4 variation-grid">
-                        <!-- Variación Diario -->
-                        <div class="bg-slate-50 rounded-lg p-3 border-t-2 border-red-500">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] font-black text-red-700 uppercase">⬇️ VS CIERRE ANTERIOR</span>
-                                <span class="text-xs font-bold text-slate-800">-0.164 MBD</span>
-                            </div>
-                            <div class="bg-white p-2 rounded border border-slate-100">
-                                <p class="text-[10px] text-slate-600">Desestabilización del sistema multifásico.</p>
-                            </div>
-                        </div>
-
-                        <!-- Variación Semana -->
-                        <div class="bg-slate-50 rounded-lg p-3 border-t-2 border-green-500">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-[11px] font-black text-green-700 uppercase">↔️ VS PLAN COMPROMISO SEMANA (PLAN FAJA)</span>
-                                <span class="text-xs font-bold text-slate-800">+0.500 MBD</span>
-                            </div>
-                            <div class="bg-white p-2 rounded border border-slate-100">
-                                <p class="text-[10px] text-slate-600">Ajuste y optimización operativa en campo.</p>
-                            </div>
-                        </div>
-
-                        <!-- Variación Potencial -->
-                        <div class="bg-slate-50 rounded-lg p-3 border-t-2 border-orange-500 col-span-full">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-[11px] font-black text-orange-700 uppercase">⬇️ VS POTENCIAL TOTAL</span>
-                                <span class="text-xs font-bold text-slate-800">-34.935 MBD</span>
-                            </div>
-                            
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-                                <!-- Cabilleros -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">1. Cabilleros (16 Pozos)</span>
-                                        <span class="text-red-600">-2.388</span>
+                    <div class="p-4">
+                        <div class="grid grid-cols-1 gap-3">
+                            <!-- Causas de Variación -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+                                <!-- Causa 1 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-slate-400 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-slate-500 uppercase">1. Cabilleros</span>
+                                        <span class="text-[10px] font-bold text-red-600">-2,388 MBD</span>
                                     </div>
-                                    <ul class="text-[9px] text-slate-500 space-y-0.5 mt-1">
-                                        <li>BC1705 (-0.345) | RBCP</li>
-                                        <li>DF1404 (-0.206) | RBCP</li>
-                                        <li>FG2203 (-0.120) | RBCP</li>
-                                        <li>PQ2005 (-0.200) | RBCP</li>
-                                    </ul>
+                                    <p class="text-[8px] text-slate-600 leading-tight">
+                                        <b>16 Pozos:</b> BC1705(-0.345), DF1404(-0.206), FG2203(-0.120), PQ2005(-0.200).
+                                    </p>
                                 </div>
-
-                                <!-- Bariven -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">2. Bariven (Materiales)</span>
-                                        <span class="text-red-600">-15.019</span>
+                                <!-- Causa 2 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-amber-500 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-amber-600 uppercase">2. Procura</span>
+                                        <span class="text-[10px] font-bold text-red-600">-15,019 MBD</span>
                                     </div>
-                                    <p class="text-[9px] text-slate-500 mt-1 italic">153 pozos Cat 2 indisponibles por falta de materiales.</p>
+                                    <p class="text-[8px] text-slate-600 leading-tight italic">
+                                        153 Pozos CAT 2 no disponibles por falta de materiales.
+                                    </p>
                                 </div>
-
-                                <!-- Yacimientos -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">3. Yacimientos (07 Pozos)</span>
-                                        <span class="text-red-600">-0.845</span>
+                                <!-- Causa 3 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-emerald-500 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-emerald-600 uppercase">3. Yacimientos</span>
+                                        <span class="text-[10px] font-bold text-red-600">-0,845 MBD</span>
                                     </div>
-                                    <p class="text-[9px] text-slate-500 mt-1">02 pozos: Baja sumergencia (-0.323)</p>
-                                    <p class="text-[9px] text-slate-500">05 pozos: Alto RGP (-0.522)</p>
+                                    <p class="text-[8px] text-slate-600 leading-tight">
+                                        <b>07 Pozos:</b> 02 B. Sumergencia (-0.323) y 05 Alto RGP (-0.522).
+                                    </p>
                                 </div>
-
-                                <!-- Operaciones -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">4. Operaciones</span>
-                                        <span class="text-red-600">-6.415</span>
+                                <!-- Causa 4 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-blue-500 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-blue-600 uppercase">4. Operaciones</span>
+                                        <span class="text-[10px] font-bold text-red-600">-6,134 MBD</span>
                                     </div>
-                                    <p class="text-[9px] text-slate-500 mt-1 italic">Incertidumbre de potencial por pruebas de pozos.</p>
+                                    <p class="text-[8px] text-slate-600 leading-tight italic">
+                                        Incertidumbre en potencial por pruebas de pozos.
+                                    </p>
                                 </div>
-
-                                <!-- COF/José -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">5. COF (José/JPS)</span>
-                                        <span class="text-red-600">-7.040</span>
+                                <!-- Causa 5 -->
+                                <div class="bg-blue-50 p-2 border-l-2 border-indigo-600 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-indigo-700 uppercase">5. COF/JOSE/JPS</span>
+                                        <span class="text-[10px] font-bold text-indigo-700">4,742 MBD</span>
                                     </div>
-                                    <p class="text-[9px] text-slate-500 mt-1">102 pozos restringidos por déficit de espacios en estación.</p>
+                                    <p class="text-[8px] text-slate-600 leading-tight">
+                                        100 Pozos restringidos por déficit de almacenamiento en JPS.
+                                    </p>
                                 </div>
-
-                                <!-- Mtto Operacional -->
-                                <div class="bg-white p-2 rounded border border-slate-200">
-                                    <div class="flex justify-between text-[10px] font-bold mb-1 border-b pb-1">
-                                        <span class="text-slate-500 uppercase">6. Mtto Operacional</span>
-                                        <span class="text-red-600">-3.160</span>
+                                <!-- Causa 6 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-orange-400 rounded">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-orange-600 uppercase">6. Optimización</span>
+                                        <span class="text-[10px] font-bold text-red-600">-0,068 MBD</span>
                                     </div>
-                                    <p class="text-[9px] text-slate-500 mt-1">Macolla FG19 (14 pozos) / BMF-GH29 (-1.279)</p>
-                                    <p class="text-[9px] text-slate-500">24 pozos a 60 rpm / BMF-GH29 (-1.881)</p>
+                                    <p class="text-[8px] text-slate-600 leading-tight">
+                                        2 Pozos en Proceso de Rampeo.
+                                    </p>
+                                </div>
+                                <!-- Causa 6 bis/7 -->
+                                <div class="bg-slate-50 p-2 border-l-2 border-red-600 rounded md:col-span-2">
+                                    <div class="flex justify-between items-start mb-1">
+                                        <span class="text-[8px] font-black text-red-700 uppercase">7. Mantenimiento Operacional</span>
+                                        <span class="text-[10px] font-bold text-red-600">-3,16 MBD</span>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-2">
+                                        <p class="text-[7px] text-slate-600 leading-tight">
+                                            <b>M. FG19:</b> 14 pozos por indisponibilidad de BMF GH29 (-1.279).
+                                        </p>
+                                        <p class="text-[7px] text-slate-600 leading-tight">
+                                            <b>RPM:</b> 24 Pozos a 60 RPM por indisponibilidad BMF GH29 (-1.881).
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -373,7 +460,7 @@
             <p class="text-[10px] font-black text-slate-600 uppercase tracking-widest">Gerencia de Planificación</p>
             <p class="text-[9px] text-slate-400 uppercase">E.M. Petrolera Roraima S.A.</p>
             <p class="mt-2 text-[8px] text-blue-500 font-bold italic border border-blue-200 inline-block px-2 py-0.5 rounded uppercase">
-                V1.0.8 - Actualización Plan Faja
+                Actualización: 16/04/2026 - Reporte Operativo Diario
             </p>
         </div>
     </footer>
