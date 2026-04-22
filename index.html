@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -88,7 +88,7 @@
 </head>
 <body class="text-slate-800">
 
-<!-- Encabezado -->
+   <!-- Encabezado -->
     <header class="bg-primary text-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
             <div class="flex items-center space-x-4">
@@ -99,7 +99,7 @@
                     <h1 class="text-base md:text-lg font-bold uppercase leading-tight tracking-tight">Petrolera Roraima S.A.</h1>
                     <div class="flex items-center mt-0.5">
                         <div class="w-2 h-2 bg-green-500 rounded-full pulse-green mr-2"></div>
-                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Sistema Activo | 21/04/2026</p>
+                        <p class="text-[10px] text-green-400 font-medium leading-none uppercase tracking-wider">Sistema Activo | 21 de Abril, 2026</p>
                     </div>
                 </div>
             </div>
@@ -108,12 +108,12 @@
 
     <main class="container mx-auto px-4 py-6 md:py-10 pb-16">
         
-        <!-- 7 KPIs Principales -->
+        <!-- 7 KPIs Principales (Actualizados al 21/04) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
             <div class="card-kpi card-shadow border-blue-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Producción Actual</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">35,029</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0,621 vs Ant.</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">35.019</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0.611 vs Ant.</p>
             </div>
             <div class="card-kpi card-shadow border-purple-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Día Anterior</p>
@@ -122,8 +122,8 @@
             </div>
             <div class="card-kpi card-shadow border-blue-900">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Promedio Mensual</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">28.660</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-blue-600"><i class="fas fa-chart-line"></i> 1.66 %AyS</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">28.963</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-blue-600"><i class="fas fa-chart-line"></i> 1.668 %AyS</p>
             </div>
             <div class="card-kpi card-shadow border-green-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Potencial Cat 1</p>
@@ -131,23 +131,22 @@
                 <p class="text-[9px] font-bold text-gray-400 uppercase italic">Capacidad</p>
             </div>
             <div class="card-kpi card-shadow border-slate-400">
-                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Meta POA</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38.19</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-gray-400 uppercase">Cumplimiento 90.1%</p>
+                <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Compromiso POA</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38.25</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-gray-400 uppercase">Meta Actualizada</p>
             </div>
             <div class="card-kpi card-shadow border-teal-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Macollas Activas</p>
                 <div class="my-1 text-teal-700"><span class="text-lg md:text-xl font-black">41</span><span class="text-[9px] font-bold ml-1 uppercase">Operando</span></div>
                 <p class="text-[9px] font-bold text-teal-600 uppercase">Total 64</p>
             </div>
-            <!-- TARJETA ACTUALIZADA: Compromiso Semanal con Gráfica de Proyección -->
             <div class="card-kpi card-shadow border-orange-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Compromiso Semanal</p>
-                <div class="mt-1 leading-none"><span class="text-lg md:text-xl font-black text-gray-800">34.30</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="mt-1 leading-none"><span class="text-lg md:text-xl font-black text-gray-800">34.50</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <div class="sparkline-container">
                     <canvas id="weeklySparkline"></canvas>
                 </div>
-                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Proyección: 20-26 ABR</p>
+                <p class="text-[8px] font-bold text-orange-600 uppercase mt-1">Plan Semana: 34.5</p>
             </div>
         </div>
 
@@ -173,7 +172,7 @@
             </div>
         </div>
 
-        <!-- Sección de Estatus de Equipos -->
+        <!-- Sección de Estatus de Equipos (Actualizada NPT al 21/04) -->
         <h2 class="text-xs md:text-sm font-black text-primary mb-5 uppercase tracking-widest flex items-center px-1">
             <i class="fas fa-hard-hat mr-2 text-accent"></i> Estatus Operacional de Unidades de Servicio
         </h2>
@@ -190,9 +189,9 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla / Pozo</p><p class="font-black">PQ20 / PQ20-04</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Tipo de Trabajo</p><p class="font-black">RSB (Varillas)</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Días</p><p class="font-black text-primary">1 / 0.46</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">59.0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">71.0</p></div>
                     </div>
-                    <div class="bg-green-50 rounded-lg p-2 border border-green-100"><p class="text-[10px] font-bold text-green-900 italic">Trabajo finalizado en PQ20-04 (440 Bbls/D). Unidad en espera de nueva asignación.</p></div>
+                    <div class="bg-green-50 rounded-lg p-2 border border-green-100"><p class="text-[10px] font-bold text-green-900 italic">Cerró operaciones en PQ20-04 (440 Bbls/D). Unidad en espera por asignación de pozo.</p></div>
                 </div>
             </div>
 
@@ -204,12 +203,12 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla / Pozo</p><p class="font-black">IJ27 / 66X</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla / Pozo</p><p class="font-black">66X / 66X</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Tipo de Trabajo</p><p class="font-black">RBCP (Cambio Bomba)</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Días</p><p class="font-black">3.5 / 0.1</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">212.5</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">224.5</p></div>
                     </div>
-                    <div class="bg-red-50 rounded-lg p-2 border border-red-100"><p class="text-[10px] font-bold text-red-900 italic">Movilizado a Macolla IJ27. Evaluación de falla estructural crítica en sistema.</p></div>
+                    <div class="bg-red-50 rounded-lg p-2 border border-red-100"><p class="text-[10px] font-bold text-red-900 italic">Mudado a Cluster IJ27. Operaciones detenidas por falla crítica estructural.</p></div>
                 </div>
             </div>
 
@@ -222,11 +221,11 @@
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla / Pozo</p><p class="font-black">IJ27 / Sin Pozo</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Tipo de Trabajo</p><p class="font-black">Mudanza de Equipo</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Tipo de Trabajo</p><p class="font-black">Mudanza</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan Días</p><p class="font-black">3.5</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">172.0</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">NPT (Hrs)</p><p class="font-black text-red-600">186.9</p></div>
                     </div>
-                    <div class="bg-amber-50 rounded-lg p-2 border border-amber-100"><p class="text-[10px] font-bold text-amber-900 italic">Equipo en custodia. A espera de liberación para movimiento de taladro.</p></div>
+                    <div class="bg-amber-50 rounded-lg p-2 border border-amber-100"><p class="text-[10px] font-bold text-amber-900 italic">Equipo en resguardo. Esperando inicio de mudanza a nueva macolla.</p></div>
                 </div>
             </div>
         </div>
@@ -260,7 +259,7 @@
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Potencial Disponible</p>
-                    <p class="text-lg font-black text-orange-600">14.96 <span class="text-[10px]">MBD</span></p>
+                    <p class="text-lg font-black text-orange-600">14.966 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
 
@@ -279,87 +278,242 @@
             </div>
         </div>
 
-        <!-- Análisis Detallado (Diluente y Variación) -->
+        <!-- Análisis Detallado (Diluente, Variación y Contratos) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
-            <!-- Gestión de Diluente -->
-            <div class="lg:col-span-4 bg-white p-6 rounded-xl shadow-md border border-slate-100">
-                <h3 class="font-bold text-primary mb-5 border-b border-slate-100 pb-3 flex items-center text-sm uppercase">
-                    <i class="fas fa-oil-can mr-2 text-accent"></i> Gestión de Diluente (Nafta)
-                </h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="p-3 bg-blue-50 rounded-xl">
-                        <p class="text-[9px] font-bold text-blue-800 uppercase">Inyección (MBD)</p>
-                        <p class="text-2xl font-black text-primary">10.390</p>
+            <!-- Columna Izquierda: Diluente y Contratos -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- Tarjeta Diluente (Actualizada 21/04) -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <h3 class="font-bold text-primary mb-5 border-b border-slate-100 pb-3 flex items-center text-sm uppercase">
+                        <i class="fas fa-oil-can mr-2 text-accent"></i> Gestión de Diluente (Nafta)
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-3 bg-blue-50 rounded-xl">
+                            <p class="text-[9px] font-bold text-blue-800 uppercase">Inyección (MBD)</p>
+                            <p class="text-2xl font-black text-primary">10.862</p>
+                        </div>
+                        <div class="p-3 bg-blue-50 rounded-xl">
+                            <p class="text-[9px] font-bold text-blue-800 uppercase">Inventario (MBLS)</p>
+                            <p class="text-2xl font-black text-primary">40.115</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <p class="text-[9px] font-bold text-slate-500 uppercase">Recibido (MBD)</p>
+                            <p class="text-lg font-bold">11.942</p>
+                        </div>
+                        <div class="p-3 bg-slate-50 rounded-xl">
+                            <p class="text-[9px] font-bold text-slate-500 uppercase">Autonomía (Hrs)</p>
+                            <p class="text-lg font-bold text-orange-600">88.64</p>
+                        </div>
                     </div>
-                    <div class="p-3 bg-blue-50 rounded-xl">
-                        <p class="text-[9px] font-bold text-blue-800 uppercase">Inventario (MBLS)</p>
-                        <p class="text-2xl font-black text-primary">38.935</p>
+                    <div class="mt-4 p-2 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
+                         <span class="text-[9px] font-bold text-slate-400 uppercase">Calidad Recibida:</span>
+                         <span class="text-xs font-black text-primary">60.6 °API</span>
                     </div>
-                    <div class="p-3 bg-slate-50 rounded-xl">
-                        <p class="text-[9px] font-bold text-slate-500 uppercase">Recibido (MBD)</p>
-                        <p class="text-lg font-bold">11.955</p>
+                </div>
+
+                <!-- Gestión Contractual (Sin Cambios) -->
+                <div class="bg-white p-6 rounded-xl shadow-md border border-slate-100">
+                    <h3 class="font-bold text-primary mb-5 border-b border-slate-100 pb-3 flex items-center text-sm uppercase">
+                        <i class="fas fa-file-contract mr-2 text-accent"></i> Gestión Contractual
+                    </h3>
+                    
+                    <!-- ODS Section -->
+                    <div class="mb-4">
+                        <p class="text-[10px] font-black text-slate-400 uppercase mb-2 flex items-center tracking-wider">
+                            <span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></span> Órdenes de Servicio (ODS)
+                        </p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                <p class="text-[8px] font-bold text-primary uppercase">MEJORADOR</p>
+                                <div class="flex justify-between items-end mt-1">
+                                    <div class="text-center"><p class="text-[7px] text-slate-400 font-bold uppercase">Cierre</p><p class="text-xs font-black">12</p></div>
+                                    <div class="text-center"><p class="text-[7px] text-slate-400 font-bold uppercase">Inicio</p><p class="text-xs font-black">3</p></div>
+                                    <div class="text-center"><p class="text-[7px] text-blue-600 font-bold uppercase">Vig.</p><p class="text-xs font-black text-blue-700">33</p></div>
+                                </div>
+                            </div>
+                            <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                <p class="text-[8px] font-bold text-primary uppercase">PRODUCCIÓN</p>
+                                <div class="flex justify-between items-end mt-1">
+                                    <div class="text-center"><p class="text-[7px] text-slate-400 font-bold uppercase">Cierre</p><p class="text-xs font-black">66</p></div>
+                                    <div class="text-center"><p class="text-[7px] text-slate-400 font-bold uppercase">Inicio</p><p class="text-xs font-black">10</p></div>
+                                    <div class="text-center"><p class="text-[7px] text-blue-600 font-bold uppercase">Vig.</p><p class="text-xs font-black text-blue-700">32</p></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-3 bg-slate-50 rounded-xl">
-                        <p class="text-[9px] font-bold text-slate-500 uppercase">Autonomía (Hrs)</p>
-                        <p class="text-lg font-bold text-orange-600">89.84</p>
+
+                    <!-- ODC Section -->
+                    <div>
+                        <p class="text-[10px] font-black text-slate-400 uppercase mb-2 flex items-center tracking-wider">
+                            <span class="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span> Órdenes de Compra (ODC)
+                        </p>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center justify-between bg-orange-50 p-2 rounded-lg border border-orange-100">
+                                <span class="text-[9px] font-black text-orange-900 uppercase">Mejorador</span>
+                                <div class="flex gap-4">
+                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Vencidas:</span><span class="text-xs font-black">08</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Activas:</span><span class="text-xs font-black">06</span></div>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between bg-orange-50 p-2 rounded-lg border border-orange-100">
+                                <span class="text-[9px] font-black text-orange-900 uppercase">Producción</span>
+                                <div class="flex gap-4">
+                                    <div class="text-right"><span class="text-[8px] font-bold text-red-600 uppercase mr-1">Vencidas:</span><span class="text-xs font-black">30</span></div>
+                                    <div class="text-right"><span class="text-[8px] font-bold text-green-700 uppercase mr-1">Activas:</span><span class="text-xs font-black">11</span></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Análisis de Variación de Producción -->
-            <div class="lg:col-span-8 bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
-                <div class="bg-primary p-3 text-white flex justify-between items-center">
-                    <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
-                        <i class="fas fa-chart-pie mr-2 text-accent"></i> Diferencial vs Potencial Total
-                    </h3>
-                    <div class="text-right">
-                        <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-30.027 MBD</span>
+            <!-- Columna Derecha: Variación y Finanzas -->
+            <div class="lg:col-span-8 flex flex-col gap-6">
+                <!-- Análisis de Variación de Producción (Actualizado 21/04) -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                    <div class="bg-primary p-3 text-white flex justify-between items-center">
+                        <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
+                            <i class="fas fa-chart-pie mr-2 text-accent"></i> Diferencial vs Potencial Total
+                        </h3>
+                        <div class="text-right">
+                            <span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-29.416 MBD</span>
+                        </div>
+                    </div>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-[10px] md:text-[11px] text-left">
+                            <thead class="bg-slate-50 text-slate-500 border-b border-slate-100">
+                                <tr>
+                                    <th class="p-3 uppercase font-bold w-1/4">Causa / Categoría</th>
+                                    <th class="p-3 uppercase font-bold text-center">Impacto (MBD)</th>
+                                    <th class="p-3 uppercase font-bold">Detalles Técnicos y Pozos</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100">
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">1. CABILLEROS</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-2.807</td>
+                                    <td class="p-3 text-slate-600">18 pozos (DF1404, FG2203, PQ2005). Trabajos RBCP.</td>
+                                </tr>
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">2. PROCURA MAT.</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-14.600</td>
+                                    <td class="p-3 text-slate-600">151 pozos Cat 2 cerrados por indisponibilidad de materiales.</td>
+                                </tr>
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">3. YACIMIENTOS</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-0.845</td>
+                                    <td class="p-3 text-slate-600">07 Pozos: Baja sumergencia (-0.323), Alto RGP (-0.522).</td>
+                                </tr>
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">4. OPERACIONES</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-11.108</td>
+                                    <td class="p-3 text-slate-600">Incertidumbre (-6.158), Ajuste VO 72 pozos (-5.351), Optimiz. (+0.404).</td>
+                                </tr>
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">5. OPTIMIZACIÓN</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-0.027</td>
+                                    <td class="p-3 text-slate-600">Falla Válvula HI2506 (-0.015), Falla VDF ST1703 (-0.012).</td>
+                                </tr>
+                                <tr class="explanation-row">
+                                    <td class="p-3 font-bold text-primary italic">6. MANTENIMIENTO</td>
+                                    <td class="p-3 text-red-600 font-bold text-center">-0.039</td>
+                                    <td class="p-3 text-slate-600">H902 Rampeo PSC (-0.011). DF1408 Rampeo RBCP (-0.028).</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bg-blue-50 p-3 flex justify-between items-center border-t border-blue-100">
+                        <span class="text-[10px] font-black text-blue-900 uppercase">Variación vs Día Anterior:</span>
+                        <div class="flex gap-4">
+                            <span class="text-[10px] font-bold text-green-700 tracking-tight"><i class="fas fa-plus"></i> 0.092 MBD (Optimización)</span>
+                            <span class="text-[10px] font-bold text-green-700 tracking-tight"><i class="fas fa-plus"></i> 0.519 MBD (Desacumulado NPTW)</span>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="overflow-x-auto">
-                    <table class="w-full text-[10px] md:text-[11px] text-left">
-                        <thead class="bg-slate-50 text-slate-500 border-b border-slate-100">
-                            <tr>
-                                <th class="p-3 uppercase font-bold w-1/4">Causa / Categoría</th>
-                                <th class="p-3 uppercase font-bold text-center">Impacto</th>
-                                <th class="p-3 uppercase font-bold">Detalles Técnicos de Pozos</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-100">
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">1. CABILLEROS</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-2.807</td>
-                                <td class="p-3 text-slate-600">18 pozos (DF1404, FG2203, PQ2005 en proceso RBCP).</td>
-                            </tr>
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">2. PROCURA / MAT.</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-14.795</td>
-                                <td class="p-3 text-slate-600">152 pozos Categoría 2 cerrados por falta de materiales.</td>
-                            </tr>
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">3. YACIMIENTOS</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-0.845</td>
-                                <td class="p-3 text-slate-600">07 Pozos. Baja sumergencia (-0.323), Alta RGP (-0.522).</td>
-                            </tr>
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">4. OPERACIONES</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-11.541</td>
-                                <td class="p-3 text-slate-600">Incertidumbre de Potencial (-7.577), ajuste VO en 58 pozos (-4.072).</td>
-                            </tr>
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">5. OPTIMIZACIÓN</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-0.039</td>
-                                <td class="p-3 text-slate-600">H902, DF1408 en arranque post-RA. (+0.108 optimización de campo).</td>
-                            </tr>
-                            <tr class="explanation-row">
-                                <td class="p-3 font-bold text-primary italic">6. MANTENIMIENTO</td>
-                                <td class="p-3 text-red-600 font-bold text-center">-0.464</td>
-                                <td class="p-3 text-slate-600">Q2704 cambio motor (-0.400). FG1913 reparación de VFD (-0.064).</td>
-                            </tr>
-                        </tbody>
-                    </table>
+
+                <!-- Gestión Financiera (Sin Cambios) -->
+                <div class="bg-white rounded-xl shadow-md border border-slate-100 overflow-hidden">
+                    <div class="bg-accent p-3 text-primary flex justify-between items-center">
+                        <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
+                            <i class="fas fa-hand-holding-usd mr-2"></i> Gestión Financiera (Enero - Febrero 2026)
+                        </h3>
+                        <div class="flex items-center gap-2 bg-white/50 px-3 py-1 rounded-full">
+                            <i class="fas fa-oil-can text-primary text-xs"></i>
+                            <span class="font-black text-xs">COSTO REAL: 7.74 $/BBL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- OPEX Block -->
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-[11px] font-black text-primary uppercase">OPEX (Gastos Operativos)</span>
+                                <span class="text-[10px] font-bold text-slate-400">Total: 13.44 MM$</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                    <div class="flex justify-between text-[10px] mb-1">
+                                        <span class="font-bold text-slate-600">PRODUCCIÓN</span>
+                                        <span class="font-black text-primary">REAL: 6.83 MM$</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-primary h-full" style="width: 100%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[9px] mt-1 text-slate-400 font-bold uppercase italic">
+                                        <span>Plan: 5.38 MM$</span>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                    <div class="flex justify-between text-[10px] mb-1">
+                                        <span class="font-bold text-slate-600">MEJORADOR</span>
+                                        <span class="font-black text-primary">REAL: 6.61 MM$</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-primary h-full" style="width: 100%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[9px] mt-1 text-slate-400 font-bold uppercase italic">
+                                        <span>Plan: 3.50 MM$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CAPEX Block -->
+                        <div>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-[11px] font-black text-primary uppercase">CAPEX (Inversiones)</span>
+                                <span class="text-[10px] font-bold text-slate-400">Total: 4.66 MM$</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="bg-amber-50 p-2 rounded-lg border border-amber-100">
+                                    <div class="flex justify-between text-[10px] mb-1">
+                                        <span class="font-bold text-amber-900 uppercase">Producción</span>
+                                        <span class="font-black text-primary">REAL: 3.08 MM$</span>
+                                    </div>
+                                    <div class="w-full bg-amber-200 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-accent h-full" style="width: 100%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[9px] mt-1 text-amber-700 font-bold uppercase italic">
+                                        <span>Plan: 1.21 MM$</span>
+                                    </div>
+                                </div>
+                                <div class="bg-slate-50 p-2 rounded-lg border border-slate-100">
+                                    <div class="flex justify-between text-[10px] mb-1">
+                                        <span class="font-bold text-slate-600 uppercase">Mejorador</span>
+                                        <span class="font-black text-primary">REAL: 1.58 MM$</span>
+                                    </div>
+                                    <div class="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                                        <div class="bg-accent h-full" style="width: 100%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[9px] mt-1 text-slate-400 font-bold uppercase italic">
+                                        <span>Plan: 0.00 MM$</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -367,7 +521,7 @@
 
     <footer class="bg-slate-800 text-center py-8 text-slate-400 text-[10px] uppercase font-bold tracking-[0.2em]">
         <div class="container mx-auto px-4">
-            <p>Reporte Preliminar - Departamento de Planificación Petrolera Roraima</p>
+            <p>Reporte Diario de Operaciones - Petrolera Roraima</p>
             <p class="mt-1">&copy; 2026 A&B Oil and Gas</p>
         </div>
     </footer>
@@ -396,7 +550,7 @@
             18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062, 
             14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109, 
             20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629, 
-            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408
+            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019
         ];
         labels.forEach((label, index) => {
             poaData.push(getPOAValue(index));
@@ -417,7 +571,7 @@
         // --- MINI-GRÁFICA SEMANAL (20-26 ABR) ---
         const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
         const sparkPlan = [34.3, 34.5, 34.7, 34.9, 35.0, 35.1, 35.2];
-        const sparkReal = [34.408, null, null, null, null, null, null];
+        const sparkReal = [34.408, 35.019, null, null, null, null, null];
         
         new Chart(sparkCtx, {
             type: 'line',
