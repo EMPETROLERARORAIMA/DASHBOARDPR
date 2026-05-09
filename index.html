@@ -84,35 +84,6 @@
             width: 100%;
             margin-top: 4px;
         }
-
-        /* Ticker News Style */
-        .ticker-container {
-            width: 100%;
-            background: #0f172a;
-            color: #c5a059;
-            padding: 6px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            position: relative;
-            border-bottom: 1px solid #1e293b;
-        }
-        .ticker-wrapper {
-            display: inline-block;
-            padding-left: 100%;
-            animation: ticker 60s linear infinite;
-        }
-        @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
-        }
-        .ticker-item {
-            display: inline-block;
-            padding: 0 2rem;
-            font-size: 10px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -135,17 +106,6 @@
                 </div>
             </div>
         </header>
-
-        <!-- Cintillo de Noticias -->
-        <div class="ticker-container">
-            <div class="ticker-wrapper" id="news-ticker">
-                <span class="ticker-item"><i class="fas fa-globe-americas mr-2"></i> Brent cotiza a $84.20 (+1.2%) impulsado por demanda global</span>
-                <span class="ticker-item"><i class="fas fa-industry mr-2"></i> OPEP+ mantiene política de recorte voluntario para estabilizar el mercado</span>
-                <span class="ticker-item"><i class="fas fa-bolt mr-2"></i> Inventarios de crudo en EE.UU. caen más de lo esperado esta semana</span>
-                <span class="ticker-item"><i class="fas fa-gas-pump mr-2"></i> Precios del Gas Natural se mantienen estables ante previsiones climáticas</span>
-                <span class="ticker-item"><i class="fas fa-ship mr-2"></i> Logística marítima reporta incremento en exportaciones desde la Faja del Orinoco</span>
-            </div>
-        </div>
 
         <main class="container mx-auto px-4 py-6 md:py-10 pb-16">
         
@@ -597,7 +557,7 @@
                 14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
                 20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
                 24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
-                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645 // Dato final al 09 de Mayo
+                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645 
             ];
 
             new Chart(ctx, {
