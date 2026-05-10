@@ -139,7 +139,7 @@
             <div class="card-kpi card-shadow border-slate-400">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Compromiso POA</p>
                 <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">38,695</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-gray-400 uppercase">Meta Actualizada</p>
+                <p class="text-[9px] font-bold text-red-600 uppercase"><i class="fas fa-caret-down"></i> -1,734 vs Real</p>
             </div>
             <div class="card-kpi card-shadow border-teal-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Macollas Activas</p>
@@ -529,7 +529,7 @@
 
         function updateCurrentDate() {
             const dateSpan = document.getElementById('current-date');
-            const now = new Date(); // Muestra la fecha en la que se abre la página
+            const now = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric' };
             dateSpan.textContent = now.toLocaleDateString('es-ES', options);
         }
