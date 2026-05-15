@@ -109,6 +109,7 @@
             </div>
         </div>
 
+       <!-- Gráfico de Producción -->
         <div class="bg-white p-4 md:p-6 rounded-xl shadow-md border border-slate-200 mb-10">
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-2">
                 <h2 class="text-xs md:text-sm font-black text-primary uppercase tracking-widest flex items-center">
@@ -529,7 +530,7 @@
             dateSpan.textContent = "15 de mayo de 2026";
         }
 
-        function initCharts() {
+       function initCharts() {
             const ctx = document.getElementById('productionChart').getContext('2d');
             
             const labels = [];
@@ -539,38 +540,91 @@
             for(let i=1; i<=30; i++) { labels.push(`${i < 10 ? '0'+i : i}/04/26`); }
             for(let i=1; i<=31; i++) { labels.push(`${i < 10 ? '0'+i : i}/05/26`); }
 
+            const planData = [
+                36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.55, 36.55, 36.55, 36.55, 36.55, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.65,
+                36.65, 36.6728, 36.6728, 36.6728, 36.6728, 36.6728, 36.6928, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425,
+                36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.9187, 36.9637, 37.0087, 37.0537, 37.0987, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437,
+                37.495, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.645, 37.645, 37.745, 37.795, 37.845, 37.845, 37.945, 37.995, 38.045, 38.095, 38.145, 38.195, 38.245, 38.295, 38.345, 38.395, 38.445, 38.495, 38.545, 38.595, 38.645, 38.695,
+                38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.699, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.811
+            ];
+
             const realData = [
                 18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062,
                 14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
                 20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
                 24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
-                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032, 36.436
+                36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032
             ];
-
-            const planData = new Array(labels.length).fill(null).map((_, i) => 36.4 + (i * 0.015));
 
             new Chart(ctx, {
                 type: 'line',
                 data: {
                     labels: labels,
                     datasets: [
-                        { label: 'REAL', data: realData, borderColor: '#1d1d86', backgroundColor: 'rgba(29, 29, 134, 0.1)', borderWidth: 3, fill: true, tension: 0.3, pointRadius: (c) => c.dataIndex === realData.length - 1 ? 6 : 0, pointBackgroundColor: '#dc2626' },
-                        { label: 'PLAN', data: planData, borderColor: '#dc2626', borderWidth: 0, showLine: false, pointRadius: 2, pointStyle: 'circle' }
+                        { 
+                            label: 'REAL (MBD)', 
+                            data: realData, 
+                            borderColor: '#1d1d86', 
+                            backgroundColor: 'rgba(29, 29, 134, 0.1)', 
+                            borderWidth: 3, 
+                            fill: true, 
+                            tension: 0.3,
+                            pointRadius: (context) => context.dataIndex === realData.length - 1 ? 6 : 0, 
+                            pointBackgroundColor: '#dc2626'
+                        },
+                        { 
+                            label: 'PLAN (Puntos)', 
+                            data: planData, 
+                            borderColor: '#dc2626', 
+                            backgroundColor: '#dc2626', 
+                            borderWidth: 0, 
+                            showLine: false, 
+                            pointRadius: 2, 
+                            pointStyle: 'circle'
+                        }
                     ]
                 },
                 options: { 
-                    responsive: true, maintainAspectRatio: false, 
-                    plugins: { legend: { display: false } },
+                    responsive: true, 
+                    maintainAspectRatio: false, 
+                    interaction: { intersect: false, mode: 'index' }, 
+                    plugins: { 
+                        legend: { display: false }, 
+                        tooltip: { padding: 10, bodyFont: { size: 11, weight: 'bold' } } 
+                    }, 
                     scales: { 
-                        x: { ticks: { maxRotation: 0, font: { size: 9 }, callback: (v, i) => labels[i].startsWith("01/") ? labels[i].split("/")[1] : null } },
-                        y: { min: 0, max: 45 }
+                        x: { 
+                            ticks: { 
+                                maxRotation: 0, 
+                                autoSkip: false, 
+                                font: { size: 9, weight: 'bold' }, 
+                                color: '#64748b', 
+                                callback: function(val, index) { 
+                                    const label = labels[index]; 
+                                    if (label && label.startsWith("01/")) { 
+                                        const monthNames = ["ENE", "FEB", "MAR", "ABR", "MAY"]; 
+                                        const monthIndex = parseInt(label.split("/")[1]) - 1; 
+                                        return monthNames[monthIndex]; 
+                                    } 
+                                    return null; 
+                                } 
+                            }, 
+                            grid: { display: true, color: 'rgba(0,0,0,0.03)', drawTicks: false } 
+                        }, 
+                        y: { 
+                            beginAtZero: false, 
+                            min: 0, 
+                            max: 45, 
+                            ticks: { font: { size: 10 }, stepSize: 5 }, 
+                            grid: { color: 'rgba(0,0,0,0.05)' } 
+                        } 
                     } 
                 }
             });
 
             const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
             const sparkPlan = [37.000, 37.050, 37.100, 37.120, 37.150, 37.180, 37.200]; 
-            const sparkReal = [37.022, 37.035, 37.069, 37.032, 36.436, null, null]; 
+            const sparkReal = [37.022, 37.035, 37.069, 37.032, null, null, null]; 
             
             new Chart(sparkCtx, {
                 type: 'line',
