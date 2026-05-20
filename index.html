@@ -27,9 +27,9 @@
         .banner-logo { max-height: 45px; width: auto; max-width: 100%; object-fit: contain; display: block; }
         .pulse-green { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); animation: pulse 2s infinite; }
         @keyframes pulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
-            70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
-            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+            0 { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70 { transform: scale(1); box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+            100 { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
         }
         .card-shadow { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
         @media (max-width: 640px) { .header-info { border-left: none; padding-left: 0; padding-top: 0.5rem; margin-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.1); } }
@@ -74,31 +74,31 @@
 
         <main class="container mx-auto px-4 py-6 md:py-10 pb-16">
         
-        <!-- KPIs Principales (Actualizados 19/05/2026) -->
+        <!-- KPIs Principales (Actualizados 20/05/2026) -->
         <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3 mb-8">
             <div class="card-kpi card-shadow border-blue-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Producción Actual</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,833</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
-                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0,189 vs Ant.</p>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">37,033</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <p class="text-[9px] font-bold text-green-600"><i class="fas fa-caret-up"></i> +0,200 vs Ant.</p>
             </div>
             <div class="card-kpi card-shadow border-purple-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Día Anterior</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,644</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,833</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-slate-400 uppercase">Referencia</p>
             </div>
             <div class="card-kpi card-shadow border-blue-900">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Promedio Mes</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,840</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">36,850</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[8px] font-bold text-blue-600 uppercase leading-tight">Abril: 31,099 MBD</p>
             </div>
             <div class="card-kpi card-shadow border-cyan-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">% AyS</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1,56</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-gray-800">1,618</span><span class="text-[9px] text-gray-400 font-bold ml-1">%</span></div>
                 <p class="text-[9px] font-bold text-green-600 uppercase">Controlado</p>
             </div>
             <div class="card-kpi card-shadow border-green-600">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Potencial Cat 1</p>
-                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">38,278</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
+                <div class="my-1"><span class="text-lg md:text-xl font-black text-green-700">38,502</span><span class="text-[9px] text-gray-400 font-bold ml-1">MBD</span></div>
                 <p class="text-[9px] font-bold text-gray-400 uppercase italic">Capacidad</p>
             </div>
             <div class="card-kpi card-shadow border-slate-400">
@@ -113,11 +113,11 @@
             </div>
             <div class="card-kpi card-shadow border-orange-500">
                 <p class="text-[9px] md:text-[10px] font-bold text-gray-500 uppercase">Compromiso Semanal</p>
-                <div class="mt-1 leading-none"><span class="text-base md:text-lg font-black text-gray-800">36,700</span><span class="text-[9px] text-gray-400 font-bold ml-1">Mbls</span></div>
+                <div class="mt-1 leading-none"><span class="text-base md:text-lg font-black text-gray-800">36,800</span><span class="text-[9px] text-gray-400 font-bold ml-1">Mbls</span></div>
                 <div class="sparkline-container">
                     <canvas id="weeklySparkline"></canvas>
                 </div>
-                <p class="text-[8px] font-bold text-green-600 uppercase mt-1">Dif. vs Plan: +0,133</p>
+                <p class="text-[8px] font-bold text-green-600 uppercase mt-1">Dif. vs Plan: +0,233</p>
             </div>
         </div>
 
@@ -162,7 +162,7 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Mes/Año</p><p class="font-black">295 / 6,631</p></div>
                     </div>
                     <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
-                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: En espera por asignación de pozo, NPT 60.5 Hrs.</p>
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: En espera por asignación de pozo, NPT 84.5 Hrs.</p>
                     </div>
                 </div>
             </div>
@@ -175,13 +175,13 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla/Pozo</p><p class="font-black">NO22 / --</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla/Pozo</p><p class="font-black">NO21 / --</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Día</p><p class="font-black text-blue-600">3,5 / 0</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Pozos Mes/Año</p><p class="font-black text-primary">5 / 13</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Año</p><p class="font-black">2,387</p></div>
                     </div>
                     <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
-                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: Operaciones detenidas por falta de transportación, NPT 64 hrs. NPT: 55 Hrs.</p>
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: Operaciones detenidas por falta de transportación, NPT 94 hrs. NPT: 88 Hrs.</p>
                     </div>
                 </div>
             </div>
@@ -194,13 +194,13 @@
                 </div>
                 <div class="p-4">
                     <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-[11px] mb-4">
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla/Pozo</p><p class="font-black">FG25 / FG25-04</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Día</p><p class="font-black text-blue-600">3,5 / 0,7</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Pozos Mes/Año</p><p class="font-black text-primary">6 / 8</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Año</p><p class="font-black">1,309</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla/Pozo</p><p class="font-black">GH35 / GH35-14</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Día</p><p class="font-black text-blue-600">3,5 / 0,1</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Pozos Mes/Año</p><p class="font-black text-primary">7 / 9</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Año</p><p class="font-black">1,484</p></div>
                     </div>
                     <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
-                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: RIH BHA de producción + 2427 Ft de Sarta de TBG 5.5 In LTC, asentó colgador en hombro de carga del casing spool con peso de 28 Klbs, desvistio llave hidráulica de TBG, planchada y accesorios.</p>
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight">Actual: Rigged Up 100% (0500 Hrs), checo presiones TBG 0 PSI - CSG 300 PSI, descargó presiones de pozo a tanque quemador, ejecutó PH con éxito presurizando hasta 500 PSI, controlo pozo bombeando 60 Bbls de ASC por CSG, observó pozo ok, levantó sarta de cabillas con peso de 12 Klbs sin observar giro, ND stuffing box + BP, NU R-BOP probó con 500 PSI ok, detuvo operaciones dos (2) Hrs por asamblea de trabajadores debido a falta de pago</p>
                     </div>
                 </div>
             </div>
@@ -216,10 +216,10 @@
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Macolla/Pozo</p><p class="font-black">NO27 / NO27-01</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Plan/Real Día</p><p class="font-black text-blue-600">3,5 / 0,1</p></div>
                         <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Pozos Año</p><p class="font-black text-primary">2</p></div>
-                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Año</p><p class="font-black">569</p></div>
+                        <div class="border-b border-slate-50 pb-1"><p class="text-slate-400 font-bold uppercase text-[9px]">Barriles Año</p><p class="font-black">269</p></div>
                     </div>
                     <div class="bg-blue-50 rounded-lg p-2 border border-blue-100">
-                        <p class="text-[9px] font-bold text-blue-900 leading-tight font-sans">Actual: Resumen: Rigged Up 100% (1200 Hrs), checó presiones TBG 0 PSI - CSG 150 PSI, descargó presiones de pozo a tanque quemador ok, ejecutó PH con éxito presurizando hasta 500 PSI, controlo pozo bombeando 100 Bbls de ASC por CSG observó pozo ok, levantó sarta de cabillas sin tensión peso de 10 Klbs, sin observar giro ascendente, desplazo columna del TBG bombeando 70 Bbls de ASC PI 55 PSI - PF 0 PSI, ND stuffing box + BP, NU R-BOP probó con 500 PSI ok, Vistio planchada, y accesorios. Actual : Vistiendo llave hidráulica de cabillas, 50%.</p>
+                        <p class="text-[9px] font-bold text-blue-900 leading-tight font-sans">Actual: SFH 2068 Ft de Sarta de TBG 5.5 In BTC + cable sensor + BHA de producción, desgloso BHA, calibró, midió, y armó nuevo BHA de producción en presencia del personal técnico.</p>
                     </div>
                 </div>
             </div>
@@ -231,22 +231,22 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-blue-600">
                 <div class="flex justify-between items-start">
-                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Pozos Categoría 1</p><h4 class="text-2xl font-black text-blue-900">265</h4></div>
+                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Pozos Categoría 1</p><h4 class="text-2xl font-black text-blue-900">266</h4></div>
                     <span class="bg-blue-100 text-blue-700 text-[9px] font-black px-2 py-1 rounded">ACTIVOS</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Potencial Disponible</p>
-                    <p class="text-lg font-black text-blue-600">38,278 <span class="text-[10px]">MBD</span></p>
+                    <p class="text-lg font-black text-blue-600">38,502 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-orange-600">
                 <div class="flex justify-between items-start">
-                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Pozos Categoría 2</p><h4 class="text-2xl font-black text-orange-900">172</h4></div>
+                    <div><p class="text-[10px] font-bold text-slate-500 uppercase">Pozos Categoría 2</p><h4 class="text-2xl font-black text-orange-900">171</h4></div>
                     <span class="bg-orange-100 text-orange-700 text-[9px] font-black px-2 py-1 rounded">RESTRINGIDOS</span>
                 </div>
                 <div class="mt-3 pt-3 border-t border-slate-50">
                     <p class="text-[9px] font-bold text-slate-400 uppercase">Potencial Disponible</p>
-                    <p class="text-lg font-black text-orange-600">14,139 <span class="text-[10px]">MBD</span></p>
+                    <p class="text-lg font-black text-orange-600">13,915 <span class="text-[10px]">MBD</span></p>
                 </div>
             </div>
             <div class="bg-white p-4 rounded-xl shadow-md border-l-4 border-slate-400">
@@ -269,14 +269,14 @@
                         <i class="fas fa-oil-can mr-2 text-accent"></i> Gestión de Diluente (Nafta)
                     </h3>
                     <div class="grid grid-cols-2 gap-4">
-                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Inyección (MBD)</p><p class="text-2xl font-black text-primary">13,246</p></div>
-                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Inventario (MBD)</p><p class="text-2xl font-black text-primary">34,541</p></div>
-                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Recibido (MBD)</p><p class="text-lg font-bold text-green-600">12,878</p></div>
-                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Autonomía (Hrs)</p><p class="text-lg font-bold text-green-600 leading-tight">61:100</p></div>
+                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Inyección (MBD)</p><p class="text-2xl font-black text-primary">12,693</p></div>
+                        <div class="p-3 bg-blue-50 rounded-xl"><p class="text-[9px] font-bold text-blue-800 uppercase">Inventario (MBD)</p><p class="text-2xl font-black text-primary">35,132</p></div>
+                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Recibido (MBD)</p><p class="text-lg font-bold text-green-600">13</p></div>
+                        <div class="p-3 bg-slate-50 rounded-xl"><p class="text-[9px] font-bold text-slate-500 uppercase">Autonomía (Hrs)</p><p class="text-lg font-bold text-green-600 leading-tight">66:430</p></div>
                     </div>
                     <div class="mt-4 p-2 bg-slate-50 border-t border-slate-100 flex justify-between items-center">
                          <span class="text-[9px] font-bold text-slate-400 uppercase">Calidad Recibida:</span>
-                         <span class="text-xs font-black text-primary">55 °API</span>
+                         <span class="text-xs font-black text-primary">58,9 °API</span>
                     </div>
                 </div>
 
@@ -340,7 +340,7 @@
                         <h3 class="text-[10px] md:text-xs font-bold uppercase flex items-center">
                             <i class="fas fa-chart-pie mr-2 text-accent"></i> Variación Total de Potencial
                         </h3>
-                        <div class="text-right"><span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-27,090 MBD</span></div>
+                        <div class="text-right"><span class="bg-accent text-primary px-3 py-1 rounded-full font-black text-xs">-26,890 MBD</span></div>
                     </div>
                     <div class="overflow-x-auto">
                         <table class="w-full text-[10px] md:text-[11px] text-left">
@@ -348,12 +348,12 @@
                                 <tr><th class="p-3 uppercase font-bold w-1/4">Causa Raíz</th><th class="p-3 uppercase font-bold text-center">Impacto</th><th class="p-3 uppercase font-bold">Detalles</th></tr>
                             </thead>
                             <tbody class="divide-y divide-slate-100">
-                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">1. UNIDADES DE PULLING</td><td class="p-3 text-red-600 font-bold text-center">-1,816</td><td class="p-3 text-slate-600 text-[9px] leading-tight">Cabillero Mayor 14 pozos -FG2504 (-0,190 MBD) RBCP -PQ2303 (-0,274 MBD), RBCP -GH3514 (-0,070 MBD), RBCP</td></tr>
-                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">2. PROCURA</td><td class="p-3 text-red-600 font-bold text-center">-14,934</td><td class="p-3 text-slate-600 text-[9px] leading-tight">151 pozos cat 2 por Indisponibilidad de materiales.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">1. UNIDADES DE PULLING</td><td class="p-3 text-red-600 font-bold text-center">-1,292</td><td class="p-3 text-slate-600 text-[9px] leading-tight">Cabillero Mayor 12 pozos ▪️-GH3510 (-0,067 MBD), RBCP ▪️-GH3514 (-0,070 MBD), RBCP</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">2. PROCURA</td><td class="p-3 text-red-600 font-bold text-center">-14,714</td><td class="p-3 text-slate-600 text-[9px] leading-tight">152 pozos cat 2 por Indisponibilidad de materiales.</td></tr>
                                 <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">3. YACIMIENTOS</td><td class="p-3 text-red-600 font-bold text-center">-1,408</td><td class="p-3 text-slate-600 text-[9px] leading-tight">19 pozos: ▪(-0,195 MBD), 02 pozo ajustado por control de A&S. ▪(-0,958 MBD), 14 pozo ajustado por baja sumergencia ▪(-0,255 MBD), 03 pozo ajustado por Alto RGP</td></tr>
-                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">4. OPERACIONES</td><td class="p-3 text-red-600 font-bold text-center">-6,205</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-6.338 MBD), Incertidumbre  de potencial por pruebas de pozos. (+0,133 MBD) Mejoras en el sistema de deshidratación (Disminución del %AyS)</td></tr>
-                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">5. OPTIMIZACIÓN</td><td class="p-3 text-red-600 font-bold text-center">-1,964</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-0.984 MBD) 13 pozos deficientes según última prueba. ▪️(-0,275  MBD) Pozo GH3515 BCP deficiente según última prueba. ▪️(-0,100 MBD) Pozo NO2106 en proceso de limpieza luego de Rbcp. ▪️(-0,315 MBD) Pozo LM2306 en proceso de limpieza luego de Rbcp. ▪️(-0,295 MBD) Pozo Q2703 en proceso de limpieza luego de Rbcp.</td></tr>
-                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">6. MTTO OPERACIONAL</td><td class="p-3 text-red-600 font-bold text-center">0</td><td class="p-3 text-slate-600 text-[9px] leading-tight">Completado / Sin diferido activo.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">4. OPERACIONES</td><td class="p-3 text-red-600 font-bold text-center">-6,16</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-6.160 MBD), Incertidumbre  de potencial por pruebas de pozos.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">5. OPTIMIZACIÓN</td><td class="p-3 text-red-600 font-bold text-center">-1,784</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-1.259 MBD) 14 pozos deficientes según última prueba. ▪️(-0,043 MBD) Pozo NO2106 en proceso de limpieza luego de Rbcp. ▪️(-0,094 MBD) Pozo LM2306 en proceso de limpieza luego de Rbcp. ▪️(-0,114 MBD) Pozo Q2703 en proceso de limpieza luego de Rbcp. ▪️(-0,274 MBD) Pozo PQ2303 en proceso de limpieza luego de Rbcp.</td></tr>
+                                <tr class="explanation-row"><td class="p-3 font-bold text-primary italic">6. MTTO OPERACIONAL</td><td class="p-3 text-red-600 font-bold text-center">-0,274</td><td class="p-3 text-slate-600 text-[9px] leading-tight">(-0,195 MBD), Pozo FG2504 en proceso de armado luego de RBCP. ▪️(-0,049 MBD), Pozo FG1913 reemplazo de correas. ▪️(-0,030 MBD), Pozo PQ1707, reemplazo de correas.</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -361,15 +361,15 @@
                         <div class="flex justify-between items-start">
                             <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Día Ant:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0,189 MBD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+0.056 MBD) Operaciones, Ajuste y optimización en campo. (+0,133 MBD) Mejoras en el sistema de deshidratación (Disminución del % AyS)</span>
+                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0,200 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+0,2 MBD) Operaciones, Ajuste y optimización en campo.</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-start mt-1">
                             <span class="text-[9px] font-black text-blue-900 uppercase">Var vs Plan Semanal:</span>
                             <div class="flex flex-col gap-0.5 text-right">
-                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0,133 MBD)</span>
-                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+0,133 MBD) Mejoras en el sistema de deshidratación (Disminución del % AyS)</span>
+                                <span class="text-[9px] font-bold text-green-600 tracking-tight"><i class="fas fa-plus"></i> (+0,233 MBD)</span>
+                                <span class="text-[8px] text-slate-500 italic max-w-xs">(+0,233 MBD) Mejoras en el sistema de deshidratación (Disminución del % AyS)</span>
                             </div>
                         </div>
                     </div>
@@ -488,30 +488,47 @@
 
     <script>
         // Fecha Actual
-        document.getElementById('current-date').textContent = "19 de mayo de 2026";
+        document.getElementById('current-date').textContent = "20 de mayo de 2026";
 
-        // --- DATOS DE GRÁFICAS ---
+        // --- GENERADOR EXACTO DE FECHAS DE CALENDARIO (151 días: Enero - Mayo) ---
+        const labels = [];
+        // Enero (31)
+        for (let d = 1; d <= 31; d++) labels.push(`${d.toString().padStart(2, '0')}/01`);
+        // Febrero (28)
+        for (let d = 1; d <= 28; d++) labels.push(`${d.toString().padStart(2, '0')}/02`);
+        // Marzo (31)
+        for (let d = 1; d <= 31; d++) labels.push(`${d.toString().padStart(2, '0')}/03`);
+        // Abril (30)
+        for (let d = 1; d <= 30; d++) labels.push(`${d.toString().padStart(2, '0')}/04`);
+        // Mayo (31)
+        for (let d = 1; d <= 31; d++) labels.push(`${d.toString().padStart(2, '0')}/05`);
+
+        // --- DATOS DE GRÁFICA PRINCIPAL (DATOS INTEGRADOS AL 20/05/2026) ---
         const planData = [
+            // Enero (31)
             36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.4, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.45, 36.55, 36.55, 36.55, 36.55, 36.55, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.6, 36.65,
-            36.65, 36.6728, 36.6728, 36.6728, 36.6728, 36.6728, 36.6928, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425, 36.8425,
-            36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.8737, 36.9187, 36.9637, 37.0087, 37.0537, 37.0987, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437, 37.1437,
-            37.495, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.645, 37.645, 37.745, 37.795, 37.845, 37.845, 37.945, 37.995, 38.045, 38.095, 38.145, 38.195, 38.245, 38.295, 38.345, 38.395, 38.445, 38.495, 38.545, 38.595, 38.645, 38.695,
-            38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.699, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.811, 38.811, 38.811
+            // Febrero (28)
+            36.65, 36.67285714, 36.67285714, 36.67285714, 36.67285714, 36.67285714, 36.69285714, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701, 36.84251701,
+            // Marzo (31)
+            36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.87370968, 36.91870968, 36.96370968, 37.00870968, 37.05370968, 37.09870968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968, 37.14370968,
+            // Abril (30)
+            37.495, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.545, 37.645, 37.645, 37.745, 37.795, 37.845, 37.895, 37.945, 37.995, 38.045, 38.095, 38.145, 38.195, 38.245, 38.295, 38.345, 38.395, 38.445, 38.495, 38.545, 38.595, 38.645, 38.695,
+            // Mayo (31)
+            38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.695, 38.699, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.7, 38.811
         ];
 
         const realData = [
+            // Enero (31)
             18.046, 18.088, 18.309, 14.476, 14.512, 14.09, 14.052, 14.043, 14.514, 14.057, 14.022, 14.185, 14.612, 14.043, 0.745, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4.211, 12.218, 15.546, 16.062,
-            14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
+            // Febrero (28)
+            14.534, 13.666, 15.245, 16.069, 18.088, 18.691, 19.542, 18.429, 18.513, 18.713, 19.439, 18.502, 18.562, 18.625, 18.682, 20.057, 20.079, 20.108, 20.1, 20.095, 20.116, 20.089, 20.251, 20.385, 20.992, 20.311, 20.196, 20.109,
+            // Marzo (31)
             20.308, 20.735, 20.371, 20.454, 20.531, 21.569, 21.428, 21.532, 21.042, 22.502, 23.334, 23.604, 24.07, 24.022, 24.067, 24.031, 24.535, 24.466, 24.529, 24.61, 24.637, 24.615, 24.07, 24.086, 24.06, 24.275, 24.22, 24.216, 24.266, 24.527, 24.629,
-            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.56, 35.692, 35.821, 36.056, 36.046, 36.328, 36.221, 36.412,
-            36.709, 36.715, 36.769, 36.737, 36.922, 36.918, 36.790, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032, 36.436, 36.501, 37.031, 36.644, 36.833
+            // Abril (30)
+            24.432, 24.405, 24.44, 24.73, 24.451, 24.687, 24.718, 24.558, 26.824, 29, 29.083, 29.069, 29.128, 29.664, 32.079, 34.383, 34.311, 34.424, 34.402, 34.408, 35.019, 35.56, 35.692, 35.821, 36.056, 36.046, 36.238, 36.221, 36.412, 36.709,
+            // Mayo (19 datos de producción real cargados de manera efectiva hasta el 19/05/2026 inclusive)
+            36.715, 36.769, 36.737, 36.922, 36.918, 36.79, 37.055, 36.645, 36.961, 37.022, 37.035, 37.069, 37.032, 36.436, 36.501, 37.031, 36.644, 36.833, 37.033, null, null, null, null, null, null, null, null, null, null, null, null
         ];
-
-        const labels = Array.from({length: 156}, (_, i) => {
-            let day = (i % 31) + 1;
-            let month = Math.floor(i / 31) + 1;
-            return `${day.toString().padStart(2, '0')}/${month.toString().padStart(2, '0')}`;
-        });
 
         // 1. Gráfico Principal
         const ctx = document.getElementById('productionChart').getContext('2d');
@@ -520,7 +537,7 @@
             data: {
                 labels: labels,
                 datasets: [
-                    { label: 'REAL (MBD)', data: realData, borderColor: '#1d1d86', backgroundColor: 'rgba(29, 29, 134, 0.1)', borderWidth: 3, fill: true, tension: 0.3, pointRadius: (context) => context.dataIndex === realData.length - 1 ? 6 : 0, pointBackgroundColor: '#dc2626' },
+                    { label: 'REAL (MBD)', data: realData, borderColor: '#1d1d86', backgroundColor: 'rgba(29, 29, 134, 0.1)', borderWidth: 3, fill: true, tension: 0.3, pointRadius: (context) => context.dataIndex === 138 ? 6 : 0, pointBackgroundColor: '#dc2626' },
                     { label: 'PLAN (Puntos)', data: planData, borderColor: '#dc2626', backgroundColor: '#dc2626', borderWidth: 0, showLine: false, pointRadius: 2, pointStyle: 'circle' }
                 ]
             },
@@ -544,7 +561,7 @@
         // 2. Sparkline Semanal
         const sparkCtx = document.getElementById('weeklySparkline').getContext('2d');
         const sparkPlan = [36.600, 36.700, 36.800, 36.900, 37.000, 37.000, 37.000]; 
-        const sparkReal = [36.644, 36.833, null, null, null, null, null]; 
+        const sparkReal = [36.833, 37.033, null, null, null, null, null]; 
         new Chart(sparkCtx, {
             type: 'line',
             data: {
